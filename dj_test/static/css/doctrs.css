@@ -1,0 +1,31 @@
+.docard {
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 3px 3px 19px rgb(16, 40, 81 / 50%) !important;
+}
+
+.docpic {
+    align-items: center;
+    width: 130px;
+    height: 130px;
+    border: 5px solid #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* .docard .btn-outline-primary {
+    border-color: #007C9D;
+    color: #ffffff;
+    font-size: 12px;
+    border-radius: 6px;
+    background: linear-gradient(to bottom right, #007291, #07394a);
+    float: right;
+}
+
+@media (min-width: 320px) and (max-width: 767.98px) {
+    .docard .btn-outline-primary {
+        width: 100%;
+        font-weight: 600;
+        padding: 9px 8px;
+    }
+} */

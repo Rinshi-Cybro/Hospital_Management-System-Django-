@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}
+About
+{% endblock %}
+
+
+{% block content %}
+
+<h3>This is About page (about html page)</h3>
+   
+
+{% if num1 > 0 %}
+   <h3>Positive number</h3>
+{% elif num1 < 0 %} 
+   <h3>Negative number</h3>  
+{% else %}   
+   <h3>Number is  Zero </h3>
+{% endif %}   
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body>
+    <h2>This is About page</h2>
+    {% if num1 > 0 %}
+       <h3>Positive number</h3>
+    {% elif num1 < 0 %} 
+       <h3>Negative number</h3>  
+    {% else %}   
+       <h3>Number is  Zero </h3>
+    {% endif %}   
+    
+</body>
+</html> -->
+
+
