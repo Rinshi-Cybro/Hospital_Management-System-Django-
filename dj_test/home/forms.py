@@ -1,13 +1,53 @@
 from django import forms
-from .models import Booking
+from .models import Booking, ContactUs
 from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Layout, Field
+from crispy_forms.layout import Layout, Field, Div, Row, Column, Submit
 
 
 class DateInput(forms.DateInput):
     input_type = 'date'
-    
 
+
+class ContactUsForm(forms.ModelForm):
+    class Meta:
+        model = ContactUs
+        fields = '__all__'  
+        widgets = {
+            'message': forms.Textarea(attrs={'rows': 2}),
+
+            # 'full_name': forms.TextInput(attrs={'placeholder': 'Enter full name'}),
+            # 'email': forms.EmailInput(attrs={'placeholder': 'Enter email'}),
+            # 'phone_number': forms.TextInput(attrs={'placeholder': 'Enter phone number'}),
+            # 'city': forms.TextInput(attrs={'placeholder': 'Enter ur city'}),
+            # 'select_doctor': forms.Select(attrs={'placeholder': 'Select ur doctor'}),
+            # 'select_department': forms.Select(attrs={'placeholder': 'Select ur department'}),
+
+        } 
+
+    def __init__(self, *args, **kwargs):
+        super(ContactUsForm, self).__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.layout = Layout(
+            Row(
+                Column('full_name', css_class='form-group col-md-6 mb-0'),
+                Column('email', css_class='form-group col-md-6 mb-0'),
+                css_class='form-row'
+            ),
+            Row(
+                Column('phone_number', css_class='form-group col-md-6 mb-0'),
+                Column('city', css_class='form-group col-md-6 mb-0'),
+                css_class='form-row'
+            ),
+            Row(
+                Column('select_doctor', css_class='form-group col-md-6 mb-0'),
+                Column('select_department', css_class='form-group col-md-6 mb-0'),
+                css_class='form-row'
+            ),
+            'message',
+            Submit('submit', 'SUBMIT FORM', css_class='btn')
+        )    
+        
+    
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
@@ -17,45 +57,13 @@ class BookingForm(forms.ModelForm):
             'booking_date': DateInput(),
         }
 
-        lables = {
-            'patient_name': "Enter patient name:",
-            'patient_phone': "Enter your phone number:",
-            'patient_email': "Enter your email Id:",
-            'doct_name': "Select a doctor:",
-            'doct_department': "Select department:",
-            'booking_date': "Select booking date:",
-        } 
-
-
-
-
-       
-        # def __init__(self, *args, **kwargs):
-        #     super().__init__(*args, **kwargs)
-        #     self.helper = FormHelper()
-        #     self.helper.layout = Layout(
-        #         Field('patient_name', css_class='form-control', placeholder='Enter patient name', label="Enter Patient Name"),
-        #         Field('patient_phone', css_class='form-control', placeholder='Enter your phone number', label="Phone Number"),
-        #         Field('patient_email', css_class='form-control', placeholder='Enter your email Id', label="Email"),
-        #         Field('doct_name', css_class='form-control', label="Select Doctor"),
-        #         Field('doct_department', css_class='form-control', label="Select Department"),
-        #         Field('booking_date', css_class='form-control', label="Select Booking Date")
-        #     )
-
-
-
-           
-
-
-
-        
-        # lables = {
-        #     'patient_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter patient name', 'label':"Enter Patient Name"}),
-        #     'patient_phone': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter your phone number'}),
-        #     'patient_email': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Enter your email Id'}),
-        #     'doct_name': forms.Select(attrs={'class': 'form-control'}),
-        #     'doct_department': forms.Select(attrs={'class': 'form-control'}),
+        # widgets = {
+        #     'patient_name': forms.TextInput(attrs={'placeholder': 'Enter patient name'}),
+        #     'patient_phone': forms.TextInput(attrs={'placeholder': 'Enter phone number'}),
+        #     'patient_email': forms.EmailInput(attrs={'placeholder': 'Enter email'}),
+        #     'doct_name': forms.Select(attrs={'placeholder': 'Select ur doctor'}),
+        #     'doct_department': forms.Select(attrs={'placeholder': 'Select ur department'}),
         #     'booking_date': DateInput(),
-        # }
+        # } 
 
         

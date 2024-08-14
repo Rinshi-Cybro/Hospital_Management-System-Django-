@@ -7,9 +7,16 @@
 {% block title %} Booking {% endblock %}
 
 {% block content %}
-<h2 class="text-center mt-3">Make an Appointment</h2>
-<hr />
-<div class="container text-center p-1 my-3 bg-success d-flex justify-content-center">
+
+<link rel="stylesheet" href="{% static 'css/bookingStyle.css' %}"/>
+<div class="booking-container mt-2">
+  <div class="booking-div">
+    <h1 class="text-center" style="color: #06617a; font-family: IBM Plex Sans,sans-serif;">Make an Appointment</h1>
+    <!-- <h4>Know more our departments</h4> -->
+  </div>
+</div>
+
+<div class="form-div container text-center p-1 my-3 d-flex justify-content-center" style="background-color: lightsteelblue;">
   <form id="bookingForm" method="POST" action="" class="w-50 mt-3">
     <div class="w-100">
       {% csrf_token %}
@@ -17,7 +24,6 @@
       <button type="submit" id="liveToastBtn" class="btn btn-primary mt-4 mb-3 mx-auto" style="width: 40%">
         Booking
       </button>
-
       <!-- <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11"> -->
       <div class="position-fixed top-50 end-0 translate-middle-y">  
         <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -30,6 +36,7 @@
   </form>
 </div>
 <script src="{% static '/js/toast.js' %}"></script>
+
 {% endblock %}
 
 

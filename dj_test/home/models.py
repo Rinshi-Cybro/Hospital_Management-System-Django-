@@ -34,3 +34,17 @@ class Booking(models.Model):
 
     def __str__(self):
         return self.patient_name
+    
+
+
+class ContactUs(models.Model):
+    full_name = models.CharField(max_length=100)
+    email = models.EmailField()
+    phone_number = models.IntegerField()
+    city = models.CharField(max_length=100)
+    select_doctor = models.ForeignKey(Doctors, on_delete=models.CASCADE)
+    select_department = models.ForeignKey(Departments, on_delete=models.CASCADE)
+    message = models.TextField() 
+
+    def __str__(self):
+        return self.full_name  

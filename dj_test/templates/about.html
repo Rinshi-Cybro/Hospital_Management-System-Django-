@@ -1,51 +1,68 @@
 {% extends 'base.html' %}
 
-{% block title %}
-About
-{% endblock %}
+{% load static %}
 
+{% block title %} About us {% endblock %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/aboutUsStyle.css' %}" />
 
-<h3>This is About page (about html page)</h3>
-   
-
-{% if num1 > 0 %}
-   <h3>Positive number</h3>
-{% elif num1 < 0 %} 
-   <h3>Negative number</h3>  
-{% else %}   
-   <h3>Number is  Zero </h3>
-{% endif %}   
-
+<div class="Main-div1" style="background-color: rgb(221, 237, 250);">
+  <div class="aboutUs-container mt-3" style="background-color: rgb(182, 217, 249);">
+    <div class="aboutUs-div" style="background-color: #ffffff;">
+      <h1>About Us</h1>
+      <h3>Know more about us, We are more than a hospital</h3>
+    </div>
+    <div class="mainBody mb-3">
+      <div class="bodyDiv">
+        <div class="about-imgDiv">
+         <img class="desktopBanner-image" fetchpriority="high" src="{% static 'images/img_aboutus.webp' %}" alt=""  style="width: 100%;">
+         <img class="mobileBanner-image" fetchpriority="high" src="{% static 'images/img_aboutus-2.webp' %}" alt=""  style="width: 100%;">
+        </div>
+        <div class="bodyText">
+          <div class="">
+            <p align="justify" style="margin-right: 0.21cm; margin-top: 0.49cm; margin-bottom: 0.53cm; line-height: 100%; background: #ffffff">
+              <font face="Times New Roman, serif"><font size="3" style="font-size: 12pt"><font color="#02475b"><font face="Arial, serif">
+              <font size="2" style="font-size: 12pt"><b>About Al Salama Hospital</b></font></font></font></font></font>
+            </p>
+            <p class="mt-2" style="margin-right: 0.21cm; margin-top: 0.49cm; margin-bottom: 0.53cm; line-height: 100%; background: #ffffff"><font face="Times New Roman, serif">
+              <font size="3" style="font-size: 12pt"><font color="#02475b"><font face="Arial, serif"><font size="2" style="font-size: 11pt">
+                Al Salama Hospitals was established in 1995 by Dr. Prathap C Reddy, renowned as the architect of modern healthcare in India. As the nation’s first corporate hospital,
+                Apollo Hospitals is acclaimed for pioneering the private healthcare revolution in the country.
+                The group has emerged as Asia’s foremost integrated healthcare services provider and has a robust presence across the healthcare ecosystem, including Hospitals, Pharmacies, Primary Care &amp;
+                Diagnostic Clinics and several retail health models. The Group also has Telemedicine facilities across several countries, Health Insurance Services, Global Projects Consultancy, Medical Colleges,
+                Medvarsity for E-Learning, Colleges of Nursing and Management of Hospitals and a Research Foundation.</font></font></font></font>
+              </font><hr>
+            </p>
+            <p align="justify" style="margin-right: 0.21cm; margin-top: 0.49cm; margin-bottom: 0.53cm; line-height: 100%; background: #ffffff">
+              <font face="Times New Roman, serif"><font size="3" style="font-size: 12pt"><font color="#02475b"><font face="Arial, serif">
+              <font size="2" style="font-size: 12pt"><b>Who are we?</b></font></font></font></font></font>
+            </p>
+            <p class="mt-2" style="margin-right: 0.21cm; margin-top: 0.49cm; margin-bottom: 0.53cm; line-height: 100%; background: #ffffff"><font face="Times New Roman, serif">
+              <font size="3" style="font-size: 12pt"><font color="#02475b"><font face="Arial, serif"><font size="2" style="font-size: 11pt">
+                We are India’s largest omnichannel digital healthcare platform with the core belief that ‘Expertise is for Everyone’.
+                We combine Al Salama’s legacy of clinical excellence, affordable cost,
+                and forward-looking research with cutting-edge technology to make the best quality healthcare easily accessible to every Indian, online.</font></font></font></font>
+              </font><hr>
+            </p>
+            <p align="justify" style="margin-right: 0.21cm; margin-top: 0.49cm; margin-bottom: 0.53cm; line-height: 100%; background: #ffffff">
+              <font face="Times New Roman, serif"><font size="3" style="font-size: 12pt"><font color="#02475b"><font face="Arial, serif">
+              <font size="2" style="font-size: 12pt"><b>What we do?</b></font></font></font></font></font>
+            </p>
+            <p class="mt-2" style="margin-right: 0.21cm; margin-top: 0.49cm; margin-bottom: 0.53cm; line-height: 100%; background: #ffffff">
+              <font face="Times New Roman, serif"><font size="3" style="font-size: 12pt"><font color="#02475b"><font face="Arial, serif">
+              <font size="2" style="font-size: 11pt">With the launch of Al Salama 24|7, the vision of our founder Dr. Prathap C. Reddy of 
+                removing mobility barriers from healthcare has become a reality.&nbsp;On a single online platform,
+                you can avail an entire gamut of services, including online doctor consultation,
+                online pharmacy and diagnostic tests at home. We also offer expert-curated solutions for COVID-care and chronic condition management,
+                along with a digital vault where you can upload all your medical history.</font></font></font></font>
+              </font>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-</head>
-<body>
-    <h2>This is About page</h2>
-    {% if num1 > 0 %}
-       <h3>Positive number</h3>
-    {% elif num1 < 0 %} 
-       <h3>Negative number</h3>  
-    {% else %}   
-       <h3>Number is  Zero </h3>
-    {% endif %}   
-    
-</body>
-</html> -->
-
-

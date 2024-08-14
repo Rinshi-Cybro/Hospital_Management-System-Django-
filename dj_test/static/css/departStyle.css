@@ -1,10 +1,51 @@
-/* .card-equal {
-    
-    height: 25rem; 
+body {
+    color: #06617a;
+    margin: 0;
+    font-size: 0.875rem;
+    font-family: IBM Plex Sans,sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    background-color: #ffffff;
+    /* background-color: rgb(205, 228, 249); */
 }
 
-.card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-} */
+.depart-container  {
+    width: 100%;
+    max-width: 1050px;
+    margin: auto;
+    height: 100%;
+    padding: 5px;
+    /* box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1); */
+    background-color: #fefefe;
+    border-radius: 5px;
+}
+
+.depart-div {
+    padding: 20px 40px 40px;
+    border-radius: 5px;
+    /* background-color: #fff; */
+    background-color: rgb(214, 232, 249);
+    box-shadow: 2px 5px 20px 0 rgba(0, 0, 0, .1);
+    margin: 10px;
+}
+
+.contnr-div {
+    padding: 20px 40px 40px;
+    border-radius: 5px;
+    box-shadow: 3px 6px 22px 0 rgba(0, 0, 0, .1);
+}
+
+@media only screen and (max-width: 900px) {
+    .depart-container {
+        padding: 56px 16px;
+    }
+}    
+
+
+
+
+
+
+
+
+

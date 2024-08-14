@@ -5,40 +5,46 @@
 {% block title %} Department {% endblock %}
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'css/departStyle.css' %}"/>
 
-<div class="mt-0" style="background-color: rgba(164, 190, 231, 0.849); opacity: 100%;">
-<h2 class="text-center mb-0 ">OUR DEPARTMENTS</h2>
+<link rel="stylesheet" href="{% static 'css/departStyle.css' %}" />
+
+<div class="depart-container mt-2">
+  <div class="depart-div">
+    <h1 class="text">Our Departments</h1>
+    <h4>Know more our departments</h4>
+  </div>
 </div>
-<div class="container-fluid p-2 d-flex flex-wrap gap-0" style="background-color: rgba(192, 210, 236, 0.849); opacity: 95%;">
-<!-- <div class="container-fluid p-1 d-flex flex-wrap gap-0" style="background-color: rgb(219, 248, 227); opacity: 93%;">   -->
+
+<div class="contnr-div container-fluid p-2 d-flex flex-wrap gap-0 mt-3"
+  style="background-color: #ffffff; opacity: 95%">
   {% for d in dept %}
-  <div class="mx-auto bg-success text-center text-white p-2 my-3 border border-primary rounded " style="max-width: 550px;">
-    <h3>{{d.dep_name}}</h3><hr>
+  <div class="mx-auto bg-success text-center text-white p-2 my-3 border border-primary rounded"
+    style="max-width: 550px">
+    <h3>{{d.dep_name}}</h3>
+    <hr />
     <p>{{d.dep_description}}</p>
-    <a href="{% url 'doctors' %}" class="btn btn-primary ">Consult Doctor</a>
+    <a href="{% url 'doctors' %}" class="btn btn-primary">Consult Doctor</a>
   </div>
   {% endfor %}
 </div>
+
 {% endblock %}
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
 <!-- style="background-color: rgb(167, 246, 190); opacity: 93%;" -->
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- <div class="d-flex flex-wrap p-3 gap-3 gap-md-4 justify-content-center pb-5">
   {% for d in dept %}

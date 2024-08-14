@@ -1,3 +1,38 @@
+body {
+    color: #075368;
+    margin: 0;
+    font-size: 0.885rem;
+    font-family: IBM Plex Sans,sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    background-color: #ffffff;
+}
+
+
+.doctor-container {
+    width: 100%;
+    max-width: 1050px;
+    margin: auto;
+    height: 100%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.doctor-div {
+    padding: 20px 40px 40px;
+    border-radius: 5px;
+    background-color: rgb(214, 232, 249);
+    box-shadow: 2px 5px 20px 0 rgba(0, 0, 0, .1);
+    margin: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+    .doctor-container {
+        padding: 56px 16px;
+    }
+}  
+
+
 .docard {
     position: relative;
     border-radius: 12px;
@@ -12,6 +47,19 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* .docard .btn-outline-primary {
     border-color: #007C9D;

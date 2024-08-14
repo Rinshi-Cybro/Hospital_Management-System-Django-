@@ -7,19 +7,21 @@
 {% block content %}
 
 <link rel="stylesheet" href="{% static 'css/doctrs.css' %}"/>
-<div class="mt-2">
-  <h2 class="text-center mb-0">OUR DOCTORS</h2>
+<div class="doctor-container mt-2">
+  <div class="doctor-div">
+    <h1 class="text">Our Doctors</h1>
+    <h5>Know more our doctors</h5>
+  </div>
 </div>
-<div class=" container-fluid">
-  <div class="row mt-4 mb-4" style="row-gap:20px;" >
+<div class="container-fluid">
+  <div class="row mt-4 mb-4" style="row-gap:20px;">
     {% for doct in doctors %}
     <div class="col-xl-4 col-md-6 col-12">
       <div class="card docard shadow border-1 text-center"
         style="width: 100%; height: 100%;">
         <img src="{{doct.doct_image.url}}"
           class="card-img-top docpic shadow img-fluid rounded-circle mx-auto d-block border border-light border-3"
-          style="border-radius: 50%;"
-          alt="..."/>
+          style="border-radius: 50%;" alt="..."/>
         <div class="card-body">
           <h5 class="card-title">{{doct.doct_name}}</h5>
           <p class="card-text">{{doct.doct_specialization}}</p>
